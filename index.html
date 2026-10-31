@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment 6, Task 0: Setup. jQuery lab by Sabyr Aslan, SE-2528.">
+  <title>Task 0: Setup | jQuery Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/task0.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container">
+    <div class="header-top"><a class="brand" href="index.html"><span class="brand-mark">SA</span> jQuery Lab</a><p class="student">Sabyr Aslan · SE-2528</p></div>
+    <nav class="site-nav" aria-label="Assignment tasks">
+        <a href="index.html" aria-current="page" title="Setup">Task 0</a>
+        <a href="task1.html" title="Selectors &amp; CSS">Task 1</a>
+        <a href="task2.html" title="Visibility">Task 2</a>
+        <a href="task3.html" title="Fade effects">Task 3</a>
+        <a href="task4.html" title="Slide effects">Task 4</a>
+        <a href="task5.html" title="Add &amp; remove">Task 5</a>
+        <a href="task6.html" title="Attributes">Task 6</a>
+        <a href="task7.html" title="Live form">Task 7</a>
+        <a href="task8.html" title="Basic animation">Task 8</a>
+        <a href="task9.html" title="Sequence">Task 9</a>
+        <a href="task10.html" title="Combined animation">Task 10</a>
+        <a href="task11.html" title="Image gallery">Task 11</a>
+    </nav>
+  </div></header>
+  <main class="page-main container" id="main">
+    <p class="library-error" id="library-error" role="alert" hidden>jQuery could not load from its CDN. Check your internet connection and reload this page.</p>
+    <div class="page-layout">
+      <section class="page-copy" aria-labelledby="page-title">
+        <p class="eyebrow">Task 0 / Part 1 · Getting started</p>
+        <h1 id="page-title">Get the page ready.</h1>
+        <p class="lede">Load jQuery from its CDN and run a function when the document is ready.</p>
+        <dl class="task-detail"><dt>Methods</dt><dd><code>$(document).ready(), console.log()</code></dd><dt>Try it</dt><dd>Open F12 → Console. The ready message prints automatically.</dd></dl>
+        <nav class="pager" aria-label="Previous and next tasks"><a href="task1.html">Next: Task 1 →</a></nav>
+      </section>
+      <section class="demo-panel" aria-labelledby="demo-title">
+        <h2 id="demo-title">jQuery is connected</h2>
+        <p class="panel-lead">The full library loads before the page's own scripts.</p>
+        <div class="demo-surface"><div class="ready-result"><span class="ready-dot" id="ready-dot" aria-hidden="true"></span><span id="ready-message">Waiting for jQuery…</span></div><p class="mini-label">Library version</p><p id="jquery-version">Loading…</p><p class="mini-label">Console output</p><pre id="console-output" aria-label="Ready message"></pre></div><div class="button-row"><button type="button" id="run-ready">Print Message Again</button></div><p class="status" id="ready-status" role="status">Check the browser console for the same message.</p>
+        <details class="example"><summary>View a short code example</summary><pre><code>$(document).ready(function () {
+  console.log(&quot;jQuery is ready!&quot;);
+});</code></pre></details>
+        <noscript><p class="status">Enable JavaScript to use the interactive demo.</p></noscript>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>WEB Technologies 1 · Assignment 6 · jQuery</p><p>Task 0 of 11 · Sabyr Aslan · SE-2528</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment 6, Task 11: Image gallery. jQuery lab by Sabyr Aslan, SE-2528.">
+  <title>Task 11: Image gallery | jQuery Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/task11.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container">
+    <div class="header-top"><a class="brand" href="index.html"><span class="brand-mark">SA</span> jQuery Lab</a><p class="student">Sabyr Aslan · SE-2528</p></div>
+    <nav class="site-nav" aria-label="Assignment tasks">
+        <a href="index.html" title="Setup">Task 0</a>
+        <a href="task1.html" title="Selectors &amp; CSS">Task 1</a>
+        <a href="task2.html" title="Visibility">Task 2</a>
+        <a href="task3.html" title="Fade effects">Task 3</a>
+        <a href="task4.html" title="Slide effects">Task 4</a>
+        <a href="task5.html" title="Add &amp; remove">Task 5</a>
+        <a href="task6.html" title="Attributes">Task 6</a>
+        <a href="task7.html" title="Live form">Task 7</a>
+        <a href="task8.html" title="Basic animation">Task 8</a>
+        <a href="task9.html" title="Sequence">Task 9</a>
+        <a href="task10.html" title="Combined animation">Task 10</a>
+        <a href="task11.html" aria-current="page" title="Image gallery">Task 11</a>
+    </nav>
+  </div></header>
+  <main class="page-main container" id="main">
+    <p class="library-error" id="library-error" role="alert" hidden>jQuery could not load from its CDN. Check your internet connection and reload this page.</p>
+    <div class="page-layout">
+      <section class="page-copy" aria-labelledby="page-title">
+        <p class="eyebrow">Task 11 / Part 5 · Mini project</p>
+        <h1 id="page-title">Explore Kazakhstan.</h1>
+        <p class="lede">An image gallery combines selectors, attributes, events, and fade effects.</p>
+        <dl class="task-detail"><dt>Methods</dt><dd><code>.on(), .attr(), .text(), .fadeIn(), .fadeOut(), .fadeToggle()</code></dd><dt>Try it</dt><dd>Fade the thumbnails in or out. Click one to enlarge it. Close with the button or Escape.</dd></dl>
+        <nav class="pager" aria-label="Previous and next tasks"><a href="task10.html">← Task 10</a><a href="index.html">Back to Task 0 →</a></nav>
+      </section>
+      <section class="demo-panel" aria-labelledby="demo-title">
+        <h2 id="demo-title">Four illustrated destinations</h2>
+        <p class="panel-lead">Original SVG illustrations inspired by Kazakhstan. Choose an image to view it at a larger size.</p>
+        <div class="button-row"><button type="button" id="show-thumbnails">Show Thumbnails</button><button type="button" class="secondary" id="hide-thumbnails">Hide Thumbnails</button><button type="button" class="secondary" id="toggle-thumbnails">Toggle</button></div><div class="gallery-grid" id="gallery-grid">
+<button type="button" class="gallery-thumbnail" data-title="Almaty mountains" data-caption="Snow-covered peaks and a turquoise mountain lake." aria-label="Enlarge Almaty mountains"><img src="assets/mountains.svg" alt="Illustration of snowy Almaty mountains and a turquoise lake" width="960" height="600"><span>Almaty mountains ↗</span></button>
+<button type="button" class="gallery-thumbnail" data-title="Charyn canyon" data-caption="Warm sandstone towers around a winding canyon path." aria-label="Enlarge Charyn canyon"><img src="assets/canyon.svg" alt="Illustration of red sandstone towers in Charyn canyon" width="960" height="600"><span>Charyn canyon ↗</span></button>
+<button type="button" class="gallery-thumbnail" data-title="Burabay lake" data-caption="Calm blue water, forested hills, and a solitary rock." aria-label="Enlarge Burabay lake"><img src="assets/lake.svg" alt="Illustration of Burabay lake surrounded by wooded hills" width="960" height="600"><span>Burabay lake ↗</span></button>
+<button type="button" class="gallery-thumbnail" data-title="Turkistan architecture" data-caption="A turquoise dome and warm brick archways inspired by Turkistan." aria-label="Enlarge Turkistan architecture"><img src="assets/turkistan.svg" alt="Illustration of Turkistan architecture with a turquoise dome" width="960" height="600"><span>Turkistan architecture ↗</span></button>
+</div><p class="status" id="gallery-status" role="status">4 of 4 thumbnails visible. Click a thumbnail to enlarge it.</p>
+<dialog class="image-dialog" id="image-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-caption"><div class="dialog-bar"><h2 id="dialog-title">Enlarged illustration</h2><button type="button" class="secondary" id="close-dialog" autofocus>Close</button></div><div class="dialog-image-frame"><img id="full-image" src="assets/mountains.svg" alt="Enlarged landscape illustration" width="960" height="600"></div><p class="dialog-caption" id="dialog-caption"></p></dialog>
+        <details class="example"><summary>View a short code example</summary><pre><code>$(&quot;.gallery-thumbnail&quot;).on(&quot;click&quot;, function () {
+  const src = $(this).find(&quot;img&quot;).attr(&quot;src&quot;);
+  $(&quot;#full-image&quot;).attr(&quot;src&quot;, src).hide().fadeIn(300);
+});</code></pre></details>
+        <noscript><p class="status">Enable JavaScript to use the interactive demo.</p></noscript>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>WEB Technologies 1 · Assignment 6 · jQuery</p><p>Task 11 of 11 · Sabyr Aslan · SE-2528</p></div></footer>
+</body>
+</html>

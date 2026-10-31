@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment 6, Task 9: Sequence. jQuery lab by Sabyr Aslan, SE-2528.">
+  <title>Task 9: Sequence | jQuery Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/task9.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container">
+    <div class="header-top"><a class="brand" href="index.html"><span class="brand-mark">SA</span> jQuery Lab</a><p class="student">Sabyr Aslan · SE-2528</p></div>
+    <nav class="site-nav" aria-label="Assignment tasks">
+        <a href="index.html" title="Setup">Task 0</a>
+        <a href="task1.html" title="Selectors &amp; CSS">Task 1</a>
+        <a href="task2.html" title="Visibility">Task 2</a>
+        <a href="task3.html" title="Fade effects">Task 3</a>
+        <a href="task4.html" title="Slide effects">Task 4</a>
+        <a href="task5.html" title="Add &amp; remove">Task 5</a>
+        <a href="task6.html" title="Attributes">Task 6</a>
+        <a href="task7.html" title="Live form">Task 7</a>
+        <a href="task8.html" title="Basic animation">Task 8</a>
+        <a href="task9.html" aria-current="page" title="Sequence">Task 9</a>
+        <a href="task10.html" title="Combined animation">Task 10</a>
+        <a href="task11.html" title="Image gallery">Task 11</a>
+    </nav>
+  </div></header>
+  <main class="page-main container" id="main">
+    <p class="library-error" id="library-error" role="alert" hidden>jQuery could not load from its CDN. Check your internet connection and reload this page.</p>
+    <div class="page-layout">
+      <section class="page-copy" aria-labelledby="page-title">
+        <p class="eyebrow">Task 9 / Part 4 · Animations</p>
+        <h1 id="page-title">Animate step by step.</h1>
+        <p class="lede">Chain four animations to make a square follow a clear sequence.</p>
+        <dl class="task-detail"><dt>Methods</dt><dd><code>.animate() chaining and the effects queue</code></dd><dt>Try it</dt><dd>Watch the order: right, down, shrink, return. Reset clears remaining steps.</dd></dl>
+        <nav class="pager" aria-label="Previous and next tasks"><a href="task8.html">← Task 8</a><a href="task10.html">Next: Task 10 →</a></nav>
+      </section>
+      <section class="demo-panel" aria-labelledby="demo-title">
+        <h2 id="demo-title">Four steps, one queue</h2>
+        <p class="panel-lead">Each .animate() waits for the previous animation to finish.</p>
+        <ol class="sequence-steps" aria-label="Animation sequence"><li>1 · Move right →</li><li>2 · Move down ↓</li><li>3 · Shrink</li><li>4 · Return ↖</li></ol><div class="animation-stage" id="animation-stage" aria-label="Animation area"><div class="animated-box" id="animation-box" aria-label="Animated purple square">SA</div></div><div class="button-row"><button type="button" id="play-sequence">Play Sequence</button><button type="button" class="secondary" id="reset-box">Reset</button></div><p class="status" id="animation-status" role="status">Ready to play all four steps.</p>
+        <details class="example"><summary>View a short code example</summary><pre><code>$(&quot;#animation-box&quot;)
+  .animate({ left: 200 }, 500)
+  .animate({ top: 180 }, 500)
+  .animate({ width: 36, height: 36 }, 400)
+  .animate({ left: 16, top: 16, width: 64, height: 64 }, 600);</code></pre></details>
+        <noscript><p class="status">Enable JavaScript to use the interactive demo.</p></noscript>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>WEB Technologies 1 · Assignment 6 · jQuery</p><p>Task 9 of 11 · Sabyr Aslan · SE-2528</p></div></footer>
+</body>
+</html>

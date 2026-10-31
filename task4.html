@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assignment 6, Task 4: Slide effects. jQuery lab by Sabyr Aslan, SE-2528.">
+  <title>Task 4: Slide effects | jQuery Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/task4.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container">
+    <div class="header-top"><a class="brand" href="index.html"><span class="brand-mark">SA</span> jQuery Lab</a><p class="student">Sabyr Aslan · SE-2528</p></div>
+    <nav class="site-nav" aria-label="Assignment tasks">
+        <a href="index.html" title="Setup">Task 0</a>
+        <a href="task1.html" title="Selectors &amp; CSS">Task 1</a>
+        <a href="task2.html" title="Visibility">Task 2</a>
+        <a href="task3.html" title="Fade effects">Task 3</a>
+        <a href="task4.html" aria-current="page" title="Slide effects">Task 4</a>
+        <a href="task5.html" title="Add &amp; remove">Task 5</a>
+        <a href="task6.html" title="Attributes">Task 6</a>
+        <a href="task7.html" title="Live form">Task 7</a>
+        <a href="task8.html" title="Basic animation">Task 8</a>
+        <a href="task9.html" title="Sequence">Task 9</a>
+        <a href="task10.html" title="Combined animation">Task 10</a>
+        <a href="task11.html" title="Image gallery">Task 11</a>
+    </nav>
+  </div></header>
+  <main class="page-main container" id="main">
+    <p class="library-error" id="library-error" role="alert" hidden>jQuery could not load from its CDN. Check your internet connection and reload this page.</p>
+    <div class="page-layout">
+      <section class="page-copy" aria-labelledby="page-title">
+        <p class="eyebrow">Task 4 / Part 2 · jQuery effects</p>
+        <h1 id="page-title">Expand a panel.</h1>
+        <p class="lede">Slide a content panel up and down to create a collapsible section.</p>
+        <dl class="task-detail"><dt>Methods</dt><dd><code>.slideUp(), .slideDown(), .slideToggle()</code></dd><dt>Try it</dt><dd>Collapse, expand, and toggle the panel.</dd></dl>
+        <nav class="pager" aria-label="Previous and next tasks"><a href="task3.html">← Task 3</a><a href="task5.html">Next: Task 5 →</a></nav>
+      </section>
+      <section class="demo-panel" aria-labelledby="demo-title">
+        <h2 id="demo-title">A collapsible study note</h2>
+        <p class="panel-lead">The panel's height animates as its contents are hidden or revealed.</p>
+        <div class="slide-frame"><section class="slide-panel" id="slide-panel" aria-labelledby="slide-title"><h3 id="slide-title">What can jQuery do?</h3><p>A small collection of methods can make a page interactive.</p><ul><li>Select and update page elements</li><li>React to clicks and typing</li><li>Show, fade, slide, and animate content</li></ul></section></div><div class="button-row"><button type="button" id="slide-up" aria-controls="slide-panel">Slide Up</button><button type="button" id="slide-down" aria-controls="slide-panel">Slide Down</button><button type="button" class="secondary" id="slide-toggle" aria-controls="slide-panel" aria-expanded="true">Slide Toggle</button></div><p class="status" id="slide-status" role="status">The panel is expanded.</p>
+        <details class="example"><summary>View a short code example</summary><pre><code>$(&quot;#slide-panel&quot;).slideUp(400);
+$(&quot;#slide-panel&quot;).slideDown(400);
+$(&quot;#slide-panel&quot;).slideToggle(400);</code></pre></details>
+        <noscript><p class="status">Enable JavaScript to use the interactive demo.</p></noscript>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>WEB Technologies 1 · Assignment 6 · jQuery</p><p>Task 4 of 11 · Sabyr Aslan · SE-2528</p></div></footer>
+</body>
+</html>
